@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ <script>
+   function callme()
+       {
+
+	    //console.log(document.getElementById("buttonID"));
+	    //console.log(document.getElementById("buttonID").value); 
+	  console.log(document.getElementsByName("b_name"));
+	   //console.log(document.getElementsByName("b_name").value); 
+
+	   // alert(document.getElementById("id1").value);
+	 // alert(document.getElementById("id2").value);
+
+	 //  var s1=document.getElementById("languages");
+	  // console.log(s1);
+
+	  // var s2=s1.options[s1.selectedIndex].value;
+	  // alert(s2);
+     
+
+      var s3=document.getElementsByName("gender");
+     	 console.log(s3);
+     	 for(i=0;i<s3.length;i++)
+     	 {
+     		 console.log(i);
+         if(s3[i].checked)
+     		 {
+           console.log(s3[i].value);
+     	     }
+     
+     	   }
+      
+     
+     	var markedCheckbox =document.getElementsByName('Prg');  
+     		console.log('welcome_1'+markedCheckbox);
+     		for (var checkbox of markedCheckbox)
+     		  {  
+     			if (checkbox.checked)  
+     				console.log(checkbox.value + ' ');
+     		  }
+     		} 
+
+
+			function handleClick(){
+                 document.getElementBtId("myForm").reset();
+			}
+ </script>
+ <form id="myForm">
+    <button id="buttonID" name="b_name" value="click here..." onclick="callme()">click</button>
+    
+
+   <label>Enter Number:</label>
+   	<input type="text" name="number" id="id1"/>
+   	<input type="submit" value="submit" onclick="callme()"/><br><br>
+   
+   <!--  <label>Enter Message</label>
+       	<textarea name="message" id="id2"></textarea>
+       	<input type="submit" value="submit" onclick="callme()"/><br></br> -->
+   
+   	<!-- <label>Hobbies:</label>
+   	<input type="checkbox" name="hobbies" value="Drawing">Drawing
+   	            <input type="checkbox" name="hobbies" value="Singing" >Singing
+   	            <input type="checkbox" name="hobbies" value="Dancing" >Dancing
+   	            <input type="checkbox" name="hobbies" value="Sketching">Sketching
+   				<input type="submit" value="submit" onclick="callme()"/><br></br>
+   	    -->
+   <!--  <label>Gender</label>
+       	<input type="radio" name="gender" value="Female">Female
+       	<input type="radio" name="gender" value="Male">Male
+       	<input type="submit" value="submit" onclick="callme()"/><br></br> -->
+
+
+  Java: <input type="checkbox" id="check1" name="Prg" value="Java">  <br>
+  PHP: <input type="checkbox" id="check2" name="Prg" value="PHP">  <br>
+  
+  Angular: <input type="checkbox" id="check3" name="Prg" value="Angular"> <br>
+  CSS: <input type="checkbox" id="check4" name="Prg" value="CSS">  <br>
+ 
+  Python: <input type="checkbox" id="check5" name="Prg" value="Python"> <br> 
+  Android: <input type="checkbox" id="check6" name="Prg" value="Android">  <br><br>
+
+
+  <!-- Reset -->
+	 <button id="btn" onclick="handleClick()">Reset</button>
+</form>
+ </body>
+</html>
